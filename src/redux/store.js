@@ -8,7 +8,7 @@ import rootReducer from "./rootReducer";
 import { rootSaga } from "./rootSaga";
 
 const sagaMiddleware = createSagaMiddleware();
-const middlewares = [thunk, sagaMiddleware];
+const middlewares = [sagaMiddleware];
 
 if (process.env.NODE_ENV === 'development') {
     middlewares.push(logger);
