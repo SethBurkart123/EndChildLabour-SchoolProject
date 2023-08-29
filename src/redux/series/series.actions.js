@@ -21,7 +21,7 @@ export const fetchNetflixSeriesFailure = errorMessage => ({
 export const fetchNetflixSeriesAsync = (fetchUrl, isPage) => {
     return dispatch => {
         dispatch(fetchNetflixSeriesRequest());
-        axios.get(fetchUrl)
+        axios.get(fetchUrl, { withCredentials: false })
             .then(res => {
                 const netflixSeries = res.data.results.map(el => ({
                     ...el,
@@ -59,7 +59,7 @@ export const fetchActionAdventureSeriesFailure = errorMessage => ({
 export const fetchActionAdventureSeriesAsync = (fetchUrl, isPage) => {
     return dispatch => {
         dispatch(fetchActionAdventureSeriesRequest());
-        axios.get(fetchUrl)
+        axios.get(fetchUrl, { withCredentials: false })
             .then(res => {
                 const actionAdventureSeries = res.data.results.map(el => ({
                     ...el,
@@ -97,7 +97,7 @@ export const fetchAnimationSeriesFailure = errorMessage => ({
 export const fetchAnimationSeriesAsync = (fetchUrl, isPage) => {
     return dispatch => {
         dispatch(fetchAnimationSeriesRequest());
-        axios.get(fetchUrl)
+        axios.get(fetchUrl, { withCredentials: false })
             .then(res => {
                 const animationSeries = res.data.results.map(el => ({
                     ...el,
