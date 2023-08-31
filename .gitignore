@@ -27,3 +27,6 @@ firebase-debug.log*
 .idea
 .env
 package-lock.json
+
+public/watch/dist/Render-Optimized-1080p.mp4
+build/watch/dist/Render-Optimized-1080p.mp4
