@@ -1,0 +1,21 @@
+.video-js {
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+.vjs-poster {
+  position: absolute !important;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.leave-arrow {
+  top: 1rem;
+  left: 1rem;
+  position: absolute;
+  z-index: 1000;
+  cursor: pointer;
+}
