@@ -12,8 +12,6 @@ import Auth from "./pages/Auth/Auth";
 import Search from "./pages/Search/Search";
 import Category from "./pages/Category/Category";
 import DetailModal from "./components/DetailModal/DetailModal";
-import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
-import PlayAnimation from "./components/PlayAnimation/PlayAnimation";
 import { selectCurrentUser } from './redux/auth/auth.selectors';
 import { selectSearchResults } from "./redux/search/search.selectors";
 import { checkUserSession } from "./redux/auth/auth.actions";
@@ -46,10 +44,6 @@ const App = () => {
                         <Redirect to="/login" />
                     </Route>
                     <Route
-                        path="/watch/:id"
-                        component={VideoPlayer}
-                    />
-                    <Route
                         path="/splash"
                         render={() => currentUser
                             ? <Redirect to="/browse" />
@@ -57,7 +51,7 @@ const App = () => {
                     />
                     <Route
                         path="/play"
-                        component={PlayAnimation}
+                        render={() => window.location.href = "/watch/"}
                     />
                     <Route
                         path="/search"
