@@ -12,8 +12,10 @@ import Searchbar from "../Searchbar/Searchbar";
 import { useDispatch, useSelector } from "react-redux";
 import { selectCurrentUser } from "../../redux/auth/auth.selectors";
 import { signOutStart } from "../../redux/auth/auth.actions";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  const location = useLocation();
 	const { width } = useViewport();
 	const isScrolled = useScroll(70);
 	const [genresNav, setGenresNav] = useState(false);
@@ -30,7 +32,7 @@ const Navbar = () => {
 		if (profileNav) setProfileNav(false);
 	});
 
-	return (
+	return !location.pathname.includes('watch') && (
 		<>
 			<motion.nav
 				className={`Navbar ${isScrolled && "Navbar__fixed"}`}
