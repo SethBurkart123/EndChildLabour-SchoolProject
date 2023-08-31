@@ -51,8 +51,8 @@ const App = () => {
                     />
                     <Route
                         path="/play"
-                        render={() => window.location.href = "/watch/"}
-                    />
+                        render={() => window.location.href = 'https://play.endchildlabour.online'}
+                        />
                     <Route
                         path="/search"
                         render={() => currentUser
